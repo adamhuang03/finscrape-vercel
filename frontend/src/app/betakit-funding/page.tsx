@@ -45,7 +45,7 @@ export default function Page() {
 
     const fetch = async (targetString: string) => {
         console.log('here')
-        const url = `${process.env.API_URL}`
+        const url = `${process.env.NEXT_PUBLIC_API_URL}`
         console.log(url)
         setStart(true)
         setEnd(false)

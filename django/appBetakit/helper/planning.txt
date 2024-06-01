@@ -1,0 +1,10 @@
+Adjustment to articles pull down to extract X number of pages
+Reason: We need more than just the first page, and adding a date comparison feature
+is too much and not focused
+
+Things to adjust
+- Code base (betakitFunding)
+
+Codebase Adjustment
+- How to structure the adjustement:
+Raw Articles should have more articles than just the fist 15 pages

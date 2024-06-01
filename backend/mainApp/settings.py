@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-)y(8g4nu@5i(jiqv#gb*u7fw^h(ujf)2+9nis24t(-wp5_vznw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app',]
 
 
 # Application definition
@@ -65,6 +65,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "finscrape.vercel.app",
 ]
 
 ROOT_URLCONF = "mainApp.urls"

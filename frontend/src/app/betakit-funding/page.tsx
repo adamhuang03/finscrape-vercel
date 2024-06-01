@@ -44,9 +44,7 @@ export default function Page() {
     }, [data]);
 
     const fetch = async (targetString: string) => {
-        console.log('here')
         const url = `${process.env.NEXT_PUBLIC_API_URL}`
-        console.log(url)
         setStart(true)
         setEnd(false)
         try {

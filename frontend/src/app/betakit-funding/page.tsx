@@ -45,11 +45,12 @@ export default function Page() {
 
     const fetch = async (targetString: string) => {
         console.log('here')
+        const url = process.env.API_URL
+        console.log(url)
         setStart(true)
         setEnd(false)
         try {
-            const url = process.env.API_URL
-            console.log(url)
+            
             const res: AxiosResponse<Data> = await axios.post(
                 `${url}/api/analysis/betakit/funding`,
                 {

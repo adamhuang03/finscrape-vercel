@@ -48,8 +48,10 @@ export default function Page() {
         setStart(true)
         setEnd(false)
         try {
+            const url = process.env.API_URL
+            console.log(url)
             const res: AxiosResponse<Data> = await axios.post(
-                'http://127.0.0.1:8000/api/analysis/betakit/funding',
+                `${url}/api/analysis/betakit/funding`,
                 {
                     'target_string': targetString
                 }

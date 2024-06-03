@@ -42,10 +42,10 @@ pure-eval==0.2.2
 pydantic==2.7.1
 pydantic_core==2.18.2
 Pygments==2.18.0
-pypiwin32==223
+# pypiwin32==223
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
-pywin32==223
+# pywin32==223
 pyzmq==26.0.3
 regex==2024.5.15
 requests==2.32.2

@@ -1097,6 +1097,20 @@ files = [
 windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
+name = "pypiwin32"
+version = "223"
+description = ""
+optional = false
+python-versions = "*"
+files = [
+    {file = "pypiwin32-223-py3-none-any.whl", hash = "sha256:67adf399debc1d5d14dffc1ab5acacb800da569754fafdc576b2a039485aa775"},
+    {file = "pypiwin32-223.tar.gz", hash = "sha256:71be40c1fbd28594214ecaecb58e7aa8b708eabfa0125c8a109ebd51edbd776a"},
+]
+
+[package.dependencies]
+pywin32 = ">=223"
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 description = "Extensions to the standard Python datetime module"
@@ -1542,4 +1556,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11.0, <3.12"
-content-hash = "1bf71d563c5f2e2acf03745a28217a5f7e3398c67930fad9b716b054a4cb711e"
+content-hash = "1a0183ea9766e6b7c7c6dc678dfd87aeee8ae9b7629a2f1a10a93d7b0cb1c221"

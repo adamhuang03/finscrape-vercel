@@ -11,7 +11,8 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: './vAzure' # set this to the path to your web app project, defaults to the repository root
+  SUB_DIRECTORY: './vAzure' # set this to the path to your web app project, defaults to the repository root
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
   PYTHON_VERSION: '3.11' # set this to the python version to use (supports 3.6, 3.7, 3.8)
 
 jobs:
@@ -33,22 +34,22 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-        working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+        working-directory: ${{ env.SUB_DIRECTORY }}
 
 
       # Optional: Add step to run tests here
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
-        working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+        working-directory: ${{ env.SUB_DIRECTORY }}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: python-app
           path: |
-            ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/release.zip
-            !${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/venv/
+            ${{ env.SUB_DIRECTORY }}/release.zip
+            !${{ env.SUB_DIRECTORY }}/venv/
 
   deploy:
     runs-on: ubuntu-latest

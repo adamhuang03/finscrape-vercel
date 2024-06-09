@@ -45,20 +45,19 @@ export default function Page() {
 
     const fetch = async (targetString: string) => {
         const url = `${process.env.NEXT_PUBLIC_API_URL}`
-        const path = `${process.env.NEXT_PUBLIC_API_PATH}`
         // const url = 'http://127.0.0.1:8000'
         setStart(true)
         setEnd(false)
         try {
             
             // const res: AxiosResponse<Data> = await axios.post(
-            //     `${url}${path}`,
+            //     `${url}/api/analysis/betakit/funding`,
             //     {
             //         'target_string': targetString
             //     }
             // );
             const res: AxiosResponse<Data> = await axios.post(
-                `${url}${path}`,
+                `${url}`,
                 {
                     'function_call': 'betakitAPI',
                     'parameter': {

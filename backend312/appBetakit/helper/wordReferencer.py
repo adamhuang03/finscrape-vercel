@@ -8,7 +8,7 @@ from nltk.tag import pos_tag
 # Download necessary NLTK data
 nltk.download('punkt')
 nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
+nltk.download('averaged_perceptron_tagger') 
 nltk.download('stopwords')
 
 def get_wordnet_pos(treebank_tag):

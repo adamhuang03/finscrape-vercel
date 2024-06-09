@@ -4,8 +4,8 @@ import datetime
 from pprint import pprint
 from typing import Any
 from bs4 import (BeautifulSoup as bs, )
-from helper.aiFunction import AccessGPT, instr_core
-from helper.wordReferencer import generate_related_words # must start from base file directory
+from .aiFunction import AccessGPT, instr_core
+from .wordReferencer import generate_related_words # must start from base file directory
 headers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246"}
 
 """

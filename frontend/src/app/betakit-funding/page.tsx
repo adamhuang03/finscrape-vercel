@@ -60,7 +60,7 @@ export default function Page() {
                 `${url}`,
                 {
                     'function_call': 'betakitAPI',
-                    'parameter': {
+                    'parameters': {
                         'target_string': targetString
                     }
                 }
